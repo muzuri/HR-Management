@@ -11,7 +11,7 @@ export class ApplicantDto {
     email: string;
 
    @IsNotEmpty()
-    resume: string;
+    cv: string;
 
     @IsNotEmpty()
     education_level: string; 

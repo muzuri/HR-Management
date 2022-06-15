@@ -1,5 +1,3 @@
-import { type } from "os";
-import { Application } from "src/application/models/application.entity";
 import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity('applicant')
@@ -16,18 +14,21 @@ export class Applicant {
     @Column({unique: true})
     email: string;
 
+    @Column({default: null})
+    age: string;
+
+    @Column({default: null})
+    country: string;
+
+    @Column({default: null})
+    city: string;
+
     @Column()
-    resume: string;
+    cv: string;
 
     @Column()
     education_level: string;
 
     @Column()
     years_experience: string;
-
-    @Column({type: 'timestamp', default: () => 'CURRENT_TIMESTAMP'})
-    createdAt: Date;
-
-    @OneToMany(type => Application, application => application.applicant)
-    application: Application[];
 }

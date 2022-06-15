@@ -8,16 +8,16 @@
             <label>
               First Name:
             </label>
-              <input type="text" formControlName="firstName" id="firstName" required="true" class="form-control" />
-              <control-messages [control]="bioSection.get('firstName')"></control-messages>
+              <input type="text" formControlName="first_name" id="first_name" required="true" class="form-control" />
+              <control-messages [control]="bioSection.get('first_name')"></control-messages>
           </div>
           
           <div class="col-4">
             <label>
               Last Name:
             </label>
-              <input type="text" formControlName="lastName" class="form-control" />
-              <control-messages [control]="bioSection.get('lastName')"></control-messages>
+              <input type="text" formControlName="last_name" class="form-control" />
+              <control-messages [control]="bioSection.get('last_name')"></control-messages>
           </div>
       
           <div class="col-4">
@@ -35,8 +35,8 @@
             <label>
               Education:
             </label>
-              <input type="text" formControlName="education" class="form-control" />
-              <control-messages [control]="bioSection.get('education')"></control-messages>
+              <input type="text" formControlName="education_level" class="form-control" />
+              <control-messages [control]="bioSection.get('education_level')"></control-messages>
           </div>
           
           
@@ -44,8 +44,8 @@
             <label>
               Experience:
             </label>
-              <input type="text" formControlName="experience" class="form-control"/>
-              <control-messages [control]="bioSection.get('experience')"></control-messages>
+              <input type="text" formControlName="years_experience" class="form-control"/>
+              <control-messages [control]="bioSection.get('years_experience')"></control-messages>
           </div>
           <div class="col-4">
             <label>
@@ -62,7 +62,14 @@
         </div>
         <div  class="row mb-3">
           <h3>Address</h3>
-          <div class="col-6">
+          <div class="col-4">
+            <label>
+              Email:
+            </label>
+              <input type="text" formControlName="email" class="form-control" />
+              <control-messages [control]="bioSection.get('email')"></control-messages>
+          </div>
+          <div class="col-4">
             <label>
               Country:
             </label>
@@ -70,7 +77,7 @@
               <control-messages [control]="bioSection.get('country')"></control-messages>
           </div>
           
-          <div class="col-6">
+          <div class="col-4">
             <label>
               City:
             </label>

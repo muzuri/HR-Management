@@ -19,15 +19,19 @@ export class ApplicationComponent implements OnInit {
     private applicationService: ApplicationService ) { 
 
     this.bioSection = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
       age: ['', Validators.required],
-      education: ['', Validators.required],
-      experience: ['', Validators.required],
+      education_level: ['', Validators.required],
+      years_experience: ['', Validators.required],
       cv: ['', Validators.required],
       country: ['', Validators.required],
-      city: ['', Validators.required]
+      city: ['', Validators.required],
+      email: ['', Validators.required]
+
     });
+
+
 
   }
 
@@ -36,9 +40,9 @@ export class ApplicationComponent implements OnInit {
   }
 
   submit(): void {
-    ///this.applicationService.create(this.bioSection.getRawValue())
-     // .subscribe(() => this.router.navigate(['/products']));
-     this.router.navigate(['/home'],{state:{message:'Thanks For Your Application'}})
+    this.applicationService.create(this.bioSection.getRawValue())
+      .subscribe(() => this.router.navigate(['/home'],{state:{message:'Thanks For Your Application'}}));['/']
+     //this.router.navigate(['/home'],{state:{message:'Thanks For Your Application'}})
   }
 
 }

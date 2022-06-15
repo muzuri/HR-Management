@@ -20,7 +20,7 @@ export class UploadComponent implements OnInit {
     const file = files.item(0);
 
     const data = new FormData();
-    data.append('image', file);
+    data.append('cv', file);
 
     this.http.post(`${environment.api}/upload`, data)
       .subscribe((res: any) => {
