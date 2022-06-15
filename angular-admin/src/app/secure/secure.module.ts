@@ -13,12 +13,8 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { RolesComponent } from './roles/roles.component';
 import { RoleCreateComponent } from './roles/role-create/role-create.component';
 import { RoleEditComponent } from './roles/role-edit/role-edit.component';
-import { ProductsComponent } from './products/products.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
-import { ProductCreateComponent } from './products/product-create/product-create.component';
 import { UploadComponent } from './components/upload/upload.component';
-import { ProductEditComponent } from './products/product-edit/product-edit.component';
-import { OrdersComponent } from './orders/orders.component';
 import { HomeComponent } from '../public/Home/Home.component';
 import { ApplicationComponent } from '../public/application/application.component';
 import { ControlMessages } from './components/controlMessages/controlMessages.component';
@@ -37,12 +33,8 @@ import { ControlMessages } from './components/controlMessages/controlMessages.co
     RolesComponent,
     RoleCreateComponent,
     RoleEditComponent,
-    ProductsComponent,
     PaginatorComponent,
-    ProductCreateComponent,
     UploadComponent,
-    ProductEditComponent,
-    OrdersComponent,
     HomeComponent,
     ApplicationComponent,
     ControlMessages
