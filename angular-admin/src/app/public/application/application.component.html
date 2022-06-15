@@ -1,0 +1,88 @@
+<div class="container mt-3"> 
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="bioSection" (ngSubmit)="submit()">
+        <div class="row mb-3">
+          <h3>Bio Details</h3>
+          <div class="col-4">
+            <label>
+              First Name:
+            </label>
+              <input type="text" formControlName="firstName" id="firstName" required="true" class="form-control" />
+              <control-messages [control]="bioSection.get('firstName')"></control-messages>
+          </div>
+          
+          <div class="col-4">
+            <label>
+              Last Name:
+            </label>
+              <input type="text" formControlName="lastName" class="form-control" />
+              <control-messages [control]="bioSection.get('lastName')"></control-messages>
+          </div>
+      
+          <div class="col-4">
+            <label>
+              Age:
+            </label>
+              <input type="text" formControlName="age" class="form-control" />
+              <control-messages [control]="bioSection.get('age')"></control-messages>
+          </div>
+        </div>
+      
+        <div  class="row mb-3">
+          <h3>Work Experience</h3>
+          <div class="col-4">
+            <label>
+              Education:
+            </label>
+              <input type="text" formControlName="education" class="form-control" />
+              <control-messages [control]="bioSection.get('education')"></control-messages>
+          </div>
+          
+          
+          <div class="col-4">
+            <label>
+              Experience:
+            </label>
+              <input type="text" formControlName="experience" class="form-control"/>
+              <control-messages [control]="bioSection.get('experience')"></control-messages>
+          </div>
+          <div class="col-4">
+            <label>
+              Resume:
+            </label>
+            <div class="input-group">
+              <input formControlName="cv" placeholder="Upload your Resume Here" class="form-control mr-3" name="cv">
+              <app-upload (uploaded)="bioSection.patchValue({'cv': $event})"></app-upload>
+              <control-messages [control]="bioSection.get('cv')"></control-messages>
+            </div>
+
+          </div>
+          
+        </div>
+        <div  class="row mb-3">
+          <h3>Address</h3>
+          <div class="col-6">
+            <label>
+              Country:
+            </label>
+              <input type="text" formControlName="country" class="form-control" />
+              <control-messages [control]="bioSection.get('country')"></control-messages>
+          </div>
+          
+          <div class="col-6">
+            <label>
+              City:
+            </label>
+              <input type="text" formControlName="city" class="form-control" />
+              <control-messages [control]="bioSection.get('city')"></control-messages>
+          </div>
+        </div>
+        <button type="submit" [disabled]="!bioSection.valid" class="btn btn-outline-secondary">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+

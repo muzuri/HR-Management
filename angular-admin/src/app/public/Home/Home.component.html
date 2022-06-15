@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card mt-3">  
+    <div class="card-header"> 
+      <div class="text-center">
+        <ng-container *ngIf="message === null;else second">
+          
+          <h3 >Welcome To Job Application System</h3>
+        
+        </ng-container>
+        <ng-template #second>
+        <ng-container >
+          
+          <h3 >{{message}}</h3>
+        </ng-container>
+        </ng-template>
+        
+      </div>
+    </div>
+    <div class="card-body"> 
+      <div class="row"> 
+        <div class="col-6 text-center">  
+          For Job Application Click <a routerLink="/apply" class="p-2 text-primary text-decoration-none">Here</a>
+        </div>
+        <div class="col-6 text-center"> 
+          For Administrators Click <a routerLink="/register" class="p-2 text-primary text-decoration-none">Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
