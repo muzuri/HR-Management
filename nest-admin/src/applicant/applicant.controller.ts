@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ApplicantService } from './applicant.service';
-import { ApplicantDto } from './models/applicant.dto';
+import { ApplicantDto } from './model/applicant.dto';
 
 @Controller('applicant')
 export class ApplicantController {
@@ -19,7 +19,7 @@ export class ApplicantController {
 
     @Get(':id')
     async get(@Param('id') id: number) {
-        return this.applicantService.findOne({id});
+        return this.applicantService.findOne(id);
     }
 
     @Put(':id')
@@ -29,7 +29,7 @@ export class ApplicantController {
     ) {
         await this.applicantService.update(id, body);
 
-        return this.applicantService.findOne({id});
+        return this.applicantService.findOne(id);
     }
 
     @Delete(':id')
@@ -37,3 +37,4 @@ export class ApplicantController {
         return this.applicantService.delete(id);
     }
 }
+

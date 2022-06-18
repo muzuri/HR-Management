@@ -7,4 +7,5 @@ import {environment} from '../../environments/environment';
 })
 export class ApplicationService extends RestService {
   endpoint = `${environment.api}/applicant`;
+  
 }

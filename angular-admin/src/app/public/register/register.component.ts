@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
       last_name: this.lastName,
       email: this.email,
       password: this.password,
-      password_confirm: this.passwordConfirm,
+      confirm_password: this.passwordConfirm,
     }).subscribe(() => this.router.navigate(['/login']));
   }
 

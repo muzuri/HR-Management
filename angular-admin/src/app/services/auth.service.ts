@@ -18,6 +18,7 @@ export class AuthService {
 
   register(data): Observable<User> {
     return this.http.post<User>(`${environment.api}/register`, data);
+
   }
 
   user(): Observable<User> {
