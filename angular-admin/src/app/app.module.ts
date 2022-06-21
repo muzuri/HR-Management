@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ControlMessages } from './secure/components/controlMessages/controlMessages.component';
 import { ValidationService } from './services/validationService.service';
+import { NgPipesModule } from 'ngx-pipes';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ValidationService } from './services/validationService.service';
     SecureModule,
     PublicModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgPipesModule
   ],
   providers: [
     {

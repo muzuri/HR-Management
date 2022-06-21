@@ -17,6 +17,10 @@ import { UploadComponent } from './components/upload/upload.component';
 import { HomeComponent } from '../public/Home/Home.component';
 import { ApplicationComponent } from '../public/application/application.component';
 import { ControlMessages } from './components/controlMessages/controlMessages.component';
+import { ApplicantComponent } from './applicant/applicant.component';
+import { ApplicantEditComponent } from './applicant-edit/applicant-edit.component';
+
+
 
 
 @NgModule({
@@ -35,7 +39,9 @@ import { ControlMessages } from './components/controlMessages/controlMessages.co
     UploadComponent,
     HomeComponent,
     ApplicationComponent,
-    ControlMessages
+    ControlMessages,
+    ApplicantComponent,
+    ApplicantEditComponent
   ],
   exports: [
     SecureComponent

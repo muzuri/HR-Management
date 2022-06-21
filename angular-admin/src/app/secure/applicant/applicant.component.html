@@ -1,0 +1,64 @@
+<div class="container mb-3">
+
+  <div class="card mb-6">
+    <div class="card-header">
+      <h2>List Of Current Applicants</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12">
+        
+          
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>cv</th>
+                <th>Education Level</th>
+                <th>Years of Experience</th>
+                <th>Current Status</th>
+                <th>Change Status</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let applicant of applicants">
+                <td>{{applicant.id}}</td>
+                <td>{{applicant.first_name}} {{applicant.last_name}}</td>
+                <td>{{applicant.email}}</td>
+                <td>{{applicant.age}}</td>
+                <td>{{applicant.country}}</td>
+                <td>{{applicant.city}}</td>
+                <td>{{(applicant.cv.length > 6)? (applicant.cv | slice:0:6)+'..':(applicant.cv) }}</td>
+                <td>{{applicant.education_level}}</td>
+                <td>{{applicant.years_experience}}</td>
+                <td>{{applicant.status}}</td>
+                <td> 
+                    <div class="btn-group mr-2">
+                        <a [routerLink]="['/applicant', applicant.id, 'edit']" class="btn btn-sm btn-outline-danger">Change</a>
+                        
+                      </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <app-paginator
+            [lastPage]="lastPage"
+            (pageChanged)="load($event)"
+          ></app-paginator>
+        
+        </div>
+        </div>
+    </div>
+
+  </div>
+
+</div>
+
+
