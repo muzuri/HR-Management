@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test --prod",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~10.1.2",
     "@angular/router": "~10.1.2",
     "c3": "^0.7.20",
+    "express": "^4.18.1",
     "ngx-pipes": "^2.7.8",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
