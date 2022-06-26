@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'https://46.101.199.97:3000'
+  api: 'https://muzuri.agrinnovators.com:3000'
 };
 
 /*
